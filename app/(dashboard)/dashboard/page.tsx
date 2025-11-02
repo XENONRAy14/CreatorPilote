@@ -141,17 +141,39 @@ export default async function DashboardPage() {
             href="/ideas"
           />
           <ActionCard
+            icon="📊"
+            title="Voir les analytics"
+            description="Analysez vos performances détaillées"
+            action="Voir"
+            href="/analytics"
+          />
+          <ActionCard
+            icon="🤝"
+            title="Partenariats"
+            description="Gérez vos collaborations"
+            action="Gérer"
+            href="/partnerships"
+          />
+          <ActionCard
             icon="📸"
-            title="Connecter Instagram"
+            title="Instagram"
             description="Synchronisez vos stats Instagram"
             action="Connecter"
             href="/settings/instagram"
           />
           <ActionCard
-            icon="📊"
-            title="Voir les analytics"
-            description="Analysez vos performances détaillées"
+            icon="🎵"
+            title="TikTok"
+            description="Entrez vos stats TikTok"
+            action="Configurer"
+            href="/tiktok"
+          />
+          <ActionCard
+            icon="📜"
+            title="Historique"
+            description="Vos idées sauvegardées"
             action="Voir"
+            href="/ideas/history"
           />
         </div>
       </main>
