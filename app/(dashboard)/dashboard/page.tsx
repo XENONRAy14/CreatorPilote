@@ -156,10 +156,10 @@ export default async function DashboardPage() {
           />
           <ActionCard
             icon="📸"
-            title="Instagram"
-            description="Synchronisez vos stats Instagram"
-            action="Connecter"
-            href="/settings/instagram"
+            title="Instagram Stats"
+            description="Voir vos statistiques Instagram"
+            action="Voir"
+            href="/instagram"
           />
           <ActionCard
             icon="🎵"
