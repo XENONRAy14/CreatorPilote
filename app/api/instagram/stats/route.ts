@@ -93,7 +93,7 @@ export async function GET() {
     const totalLikes = mediaWithInsights.reduce((sum, item) => sum + (item.like_count || 0), 0)
     const totalComments = mediaWithInsights.reduce((sum, item) => sum + (item.comments_count || 0), 0)
     const avgEngagement = mediaWithInsights.length > 0
-      ? ((totalLikes + totalComments) / mediaWithInsights.length).toFixed(2)
+      ? parseFloat(((totalLikes + totalComments) / mediaWithInsights.length).toFixed(2))
       : 0
 
     // 6. Extraire les impressions et reach des insights
@@ -125,7 +125,7 @@ export async function GET() {
       platform_type: "instagram",
       followers_count: followerCount || 0,
       posts_count: profileData.media_count || 0,
-      engagement_rate: parseFloat(avgEngagement),
+      engagement_rate: avgEngagement,
       total_likes: totalLikes,
       total_comments: totalComments,
       impressions: totalImpressions,
@@ -145,7 +145,7 @@ export async function GET() {
         posts: profileData.media_count || 0,
         impressions: totalImpressions,
         reach: totalReach,
-        avgEngagement: parseFloat(avgEngagement),
+        avgEngagement: avgEngagement,
         totalLikes,
         totalComments,
       },
